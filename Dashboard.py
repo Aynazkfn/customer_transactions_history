@@ -36,8 +36,8 @@ server = app.server
 ##############################################################
 # Data
 
-df1 = pd.read_csv('C:/Users/20190041/Desktop/Datachef assignment/customer_transactions_history-main/transactions_1.csv')
-df2 = pd.read_csv('C:/Users/20190041/Desktop/Datachef assignment/customer_transactions_history-main/transactions_2.csv')
+df1 = pd.read_csv('transactions_1.csv')
+df2 = pd.read_csv('transactions_2.csv')
 df = pd.concat ([df1,df2], axis=0, ignore_index=True).drop(['Unnamed: 0'], axis=1)
 
 df['date']= pd.to_datetime(df['date']).dt.strftime('%Y-%m-%d')
